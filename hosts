@@ -1,2 +1,2 @@
 [Test]
-10.0.0.5 ansible_pass=Redhat@12345 ansible_user=Redhat
+10.0.0.5 ansible_pass=Redhat@12345 ansible_user=redhat
