@@ -23,13 +23,7 @@
 
     - name: Intall firewalld
       command: sudo apt install -y firewalld
-
-    - name: Enable  https service
-      ansible.posix.firewalld:
-        service: http
-        permanent: yes
-        state: enabled
-
+      
     - name: Restart the firewalld service to load in the firewall changes
       systemd:
         name: firewalld
