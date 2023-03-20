@@ -5,7 +5,7 @@
   tasks:
     - name: Install apache packages
       apt:
-        name: appache2
+        name: apache2
         state: latest
 
     - name: ensure httpd is running
