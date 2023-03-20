@@ -17,4 +17,21 @@
       copy:
         content: "Ansibel using Jenkins\n"
         dest: /var/www/html/index.html
+        
+    - name: install python
+      command: sudo apt install -y python3
+
+    - name: Intall firewalld
+      command: sudo apt install -y firewalld
+
+    - name: Enable  https service
+      ansible.posix.firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+
+    - name: Restart the firewalld service to load in the firewall changes
+      systemd:
+        name: firewalld
+        state: restarted
    
