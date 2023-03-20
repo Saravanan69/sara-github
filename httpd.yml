@@ -4,13 +4,13 @@
   become: yes
   tasks:
     - name: Install apache packages
-      dnf:
-        name: httpd
+      apt:
+        name: appache2
         state: latest
 
     - name: ensure httpd is running
       service:
-        name:  httpd
+        name:  apache2
         state: started
     - debub:
         msg : the service is running
