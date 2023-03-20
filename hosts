@@ -1,0 +1,2 @@
+[Test]
+52.172.10.94 ansible_ssh_pass=Redhat@12345 ansible_ssh_user=Redhat
